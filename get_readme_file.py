@@ -33,9 +33,12 @@ def get_readme_file(user_name, repo_name):
       csvWriter.writerow([user_name, repo_name, content])
       message = "SUCCESS | user: " + user_name + " | repo: " + repo_name
       logger.info(message)
-      print message
+
+      return True
+
   else:
       message = "ERROR | user: " + user_name + " | repo: " + repo_name
       logger.error(message)
-      print message
       csvWriter.writerow([user_name, repo_name, "NULL"])
+
+      return False

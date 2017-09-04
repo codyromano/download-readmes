@@ -1,2 +1,4 @@
 *.pyc
 *.DS_Store
+readme-data/log
+*readme-data.csv
